@@ -10,6 +10,17 @@ shortcut for commenting: Ctrl + /
 Note:
 When both default and parameterized constructor is present in a class,
 at the time of object creation, parameterized constructor is expected.
+
+Difference between constructor and member function:
+
+Constructor is a special type of member function.
+Why special :- 
+    * get called automatically
+    * allocates memory for the data members
+
+Member function:
+* has to be called explicitly using an object of the class
+
 """
 
 integer_a = 1
@@ -42,8 +53,23 @@ class Laptop:
         self.monitor = Monitor
         self.charging_point = ChargingPoint
         self.operating_system = OperatingSystem
+    
+    def display_details(self):
+        print("Brand            : ", self.brand_name)
+        print("Keyboard         : ", self.keyboard)
+        print("Monitor          : ", self.monitor)
+        print("Charging Point   : ", self.charging_point)
+        print("Operating System : ", self.operating_system)
+
 
     # option 2 - using member functions
+    def assign_values(self, BrandName: str, Keyboard: bool, Monitor: float, ChargingPoint: bool, OperatingSystem: str):
+        self.brand_name = BrandName
+        self.keyboard = Keyboard
+        self.monitor = Monitor
+        self.charging_point = ChargingPoint
+        self.operating_system = OperatingSystem
+
 
 # asus_laptop = Laptop()
 # asus_laptop.brand_name = "Asus"
@@ -63,8 +89,4 @@ class Laptop:
 # ^ - bitwise operator
 
 lenovo_laptop = Laptop("Lenovo", True, 13, True, "Linux")
-print("Brand            : ", lenovo_laptop.brand_name)
-print("Keyboard         : ", lenovo_laptop.keyboard)
-print("Monitor          : ", lenovo_laptop.monitor)
-print("Charging Point   : ", lenovo_laptop.charging_point)
-print("Operating System : ", lenovo_laptop.operating_system)
+lenovo_laptop.display_details()

@@ -1,0 +1,89 @@
+UserType / role:
+	* user type id
+	* user type name
+
+1. Admin
+2. Tenant
+3. Owner
+4. Approver
+
+
+User:
+	* full name
+	* email address
+	* mobile
+	* aadhaar
+	* password
+	* user type: int
+
+user_id, role_id,
+1, 1
+1, 2
+1, 3
+
+1. Main Menu
+	Show choices:
+		* new user?
+		* already registered
+	Ask user choice
+
+2. If new user:
+	* ask for user details
+	* store the user details
+	* move him to main menu
+
+3. If already registered:
+	* show login
+	* determine type of use
+	* navigate to that user type menu
+		* if admin -> Admin Menu
+		* if owner -> Owner Menu
+		* if tenant -> Tenant Menu
+		* if approver -> Approver Menu
+
+
+4. Owner Menu:
+	* CRUD for land details
+	* Send for Aproval
+	* Show Incoming Tenants Requests
+	* Approve/Decline requests
+	* Show List of approved tenant's requests
+	* show list of declined tenant's requests
+	* log out
+
+5. Approver Menu:
+	* show incoming owners' land approval requests
+	* approve / decline
+	* list of approved
+	* list of declined
+	* log out
+
+
+6. Tenant Menu:
+	* show list of lands available
+	* request for renting
+	* show status of requested lands
+	* show list of lands taken for rent (history of rentals)
+	* log out
+
+
+7. Admin Menu:
+	* show list of lands
+	* show list of rentals
+	* Advertisement Menu
+		CRUD:
+		C -> Create
+		R -> Read
+		U -> Update
+		D -> Delete
+
+		* Add Advertisement
+		* edit
+		* delete
+		* view
+	* logout
+
+	// Bonus stuff
+	* show list of owners
+	* show list of tenants
+	* show list of approvers
